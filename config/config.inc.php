@@ -18,6 +18,7 @@ class connect
 		$conn = new mysqli($this->host, $this->user, $this->password, $this->database);
 		
 		return $conn;
+
 	}
 
 }
