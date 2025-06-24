@@ -2,6 +2,8 @@
 
 require_once("config/config.inc.php");
 
+session_start();
+
 class auth
 {
     function login($username, $password)
@@ -11,12 +13,12 @@ class auth
 
         $sql = "SELECT * FROM users WHERE name='$username' AND password='$password'"; 
         $result = $conn->query($sql);
-
+        
         if ($result->num_rows > 0) { 
+            
+            $_SESSION['name'] = $username; 
 
-            $_SESSION['name'] = $name; 
-
-            header("Location: welcome.php"); 
+            header("Location: /"); 
 
         } else { 
 
@@ -34,6 +36,6 @@ class auth
 
         session_destroy(); 
 
-        header("Location: index.php"); 
+        header("Location: /"); 
     }
 }

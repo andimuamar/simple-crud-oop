@@ -22,7 +22,11 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Logout</a>
+          <?php
+           
+            // var_dump($_SESSION['name']);
+          ?>
+          <a class="nav-link" href="/logout" tabindex="-1">Logout</a>
         </li>
       </ul>
       <form class="d-flex">

@@ -4,6 +4,10 @@
 include("views/frontend/layout/header.php");
 include("views/frontend/layout/nav.php");
 
+require_once("./functions/auth.php");
+$auth = new auth();
+
+var_dump($auth->login("admin", "admin"));
 ?>
 <div class="container">
     <div class="row mt-5 d-flex justify-content-center">

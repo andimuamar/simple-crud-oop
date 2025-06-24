@@ -1,4 +1,7 @@
 <?php // router.php
+
+$server = $_SERVER["REQUEST_URI"];
+
 switch ($_SERVER["REQUEST_URI"]){
 
     case "/":
@@ -6,6 +9,9 @@ switch ($_SERVER["REQUEST_URI"]){
     break;
     case "/login":
     include("./views/frontend/auth/login_page.php");
+    break;
+    case "/logout":
+    include("./views/frontend/auth/logout_page.php");
     break;
     case "/register":
     include("./views/frontend/auth/register_page.php");
